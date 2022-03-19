@@ -17,14 +17,14 @@ first one removed. The basic operations of a stack are:
 
 ## Queue
 
-In a queue the elements are added in FIFO (First In, First Out) order.
+In a queue the elements are added in `FIFO` (First In, First Out) order.
 This meand that the first element inserted is the first one to be removed. 
 The basic operations of the queue are:
 
 - enqueue — insert an element at the rear
 - dequeue — remove an element from the front
 
-![image](link)
+![image](https://github.com/anamariapanait10/Stack-with-two-queues/blob/main/stack_queue.png)
 
 ## Algorithm 
 
@@ -51,11 +51,12 @@ we have a time complexity of `O(n)` because we have to transfer n-1 elements
 from q1 to q2 and back from q2 to q1.
 
 ### Implementation
-
-	class Stack1 {
-    		queue<int> q1, q2;
-    		int curr_size;
-	public:
+```diff
+	# class Stack1 {
+    	#	queue<int> q1, q2;
+    	#	int curr_size;
+	#public:
+```
     		Stack1(){
         		curr_size = 0;
     		}
@@ -86,6 +87,7 @@ from q1 to q2 and back from q2 to q1.
 			return val;
     		}
 	};
+![image](https://github.com/anamariapanait10/Stack-with-two-queues/blob/main/method1.png)
 
 ## Method #2 (By making pop operation costly) 
 
@@ -140,5 +142,7 @@ from q1 to q2 and back from q2 to q1.
         		return val;
     		}
 	};
+![image](https://github.com/anamariapanait10/Stack-with-two-queues/blob/main/method1.png)
 
+Full code can be found [here]:https://github.com/anamariapanait10/Stack-with-two-queues/blob/main/main.cpp .
 
