@@ -26,7 +26,7 @@ The basic operations of the queue are:
 
 ![image](https://github.com/anamariapanait10/Stack-with-two-queues/blob/main/stack_queue.png)
 
-## Algorithm 
+## Algorithm: 
 
 Let stack to be implemented be `s` and queues used to 
 implement be `q1` and `q2`. Stack `s` can be implemented in two ways:
@@ -44,19 +44,18 @@ To construct a stack using two queues q1 and q2, we need to simulate the stack o
 As we see, q1 acts as the main source for the stack, while q2 is just a helper queue that we use to preserve 
 the order expected by the stack.
 
-### Complexity 
+### Complexity: 
 
 The time complexity of the `pop` operation is `O(1)`. For the `push` operation, 
 we have a time complexity of `O(n)` because we have to transfer n-1 elements 
 from q1 to q2 and back from q2 to q1.
 
-### Implementation
-```diff
-#	class Stack1 {
-#    		queue<int> q1, q2;
-#    		int curr_size;
-#	public:
-```
+### Implementation:
+
+	class Stack1 {
+    		queue<int> q1, q2;
+    		int curr_size;
+	public:
     		Stack1(){
         		curr_size = 0;
     		}
@@ -87,7 +86,7 @@ from q1 to q2 and back from q2 to q1.
 			return val;
     		}
 	};
-### Example
+### Example:
 ![image](https://github.com/anamariapanait10/Stack-with-two-queues/blob/main/method1.png)
 
 ## Method #2 (By making pop operation costly) 
@@ -100,14 +99,14 @@ To construct a stack using two queues q1 and q2, we need to simulate the stack o
 	- enqueue all elements except the last from q1 to q2 and then enqueue all elements from q2 back to q1
 	- dequeue an element from q1 and return it
 
-### Complexity 
+### Complexity: 
 
 The time complexity of the `push` operation is `O(1)`. For the `pop` operation, 
 we have a time complexity of `O(n)` because we have to transfer n-1 elements 
 from q1 to q2 and back from q2 to q1.
 
 
-### Implementation
+### Implementation:
 
 	class Stack2 {
     		queue<int> q1, q2;
@@ -143,7 +142,7 @@ from q1 to q2 and back from q2 to q1.
         		return val;
     		}
 	};
-### Example
+### Example:
 ![image](https://github.com/anamariapanait10/Stack-with-two-queues/blob/main/method1.png)
 
 Full code can be found [here](https://github.com/anamariapanait10/Stack-with-two-queues/blob/main/main.cpp) .
